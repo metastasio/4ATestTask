@@ -1,0 +1,8 @@
+.wrapper {
+  margin: 0 auto;
+}
+
+.banner > img {
+    display: block;
+    border: 1px solid red;
+}
