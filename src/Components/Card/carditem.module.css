@@ -1,6 +1,14 @@
 .card_link {
   text-decoration: none;
   color: var(--fc-main);
+  &:hover .wrapper {
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
+  &:active .wrapper {
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
 }
 
 .wrapper {
@@ -11,8 +19,10 @@
 
   display: grid;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(2, auto);
-  gap: 5px 24px;
+  grid-template-columns: 100px auto;
+  gap: 1px 24px;
+
+  position: relative;
 }
 
 .date,
@@ -57,4 +67,21 @@
   color: var(--fc-light);
   text-align: right;
   text-decoration: line-through;
+}
+
+.sale {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('Star.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  right: 9px;
+  top: 4px;
+  color: var(--bg-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  padding: 16px 0;
 }

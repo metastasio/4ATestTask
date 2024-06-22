@@ -2,8 +2,12 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+}
 
-  border: 1px solid red;
+.title {
+  margin: 0;
+  padding: 0;
+  line-height: 26.4px;
 }
 
 .banner > img {
@@ -70,6 +74,8 @@
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   box-shadow: inset 24px 24px var(--accent2);
+
+  background-image: url('checked.svg');
 }
 
 .policy_input:checked::before {

@@ -6,23 +6,47 @@ export const Main = () => {
   return (
     <>
       <main className={styles.wrapper}>
-        <h1>Выберите подходящий тарифный план</h1>
+        <h1 className={styles.title}>Выберите подходящий тарифный план</h1>
         <picture className={styles.banner}>
           <source srcSet='img.png' media='(max-width: 600px)' />
           <img src='img big.png' alt='Фото, рекламирующее курс' />
         </picture>
         <ul className={styles.card_list}>
           <li className={styles.card_item}>
-            <CardItem />
+            <CardItem
+              date='1 месяц'
+              text='Чтобы просто начать 👍🏻'
+              priceDiscount={699}
+              price={999}
+              discount={30}
+            />
           </li>
           <li className={styles.card_item}>
-            <CardItem />
+            <CardItem
+              date='3 месяца'
+              text='Привести тело впорядок 💪🏻'
+              priceDiscount={999}
+              price={1299}
+              discount={40}
+            />
           </li>
           <li className={styles.card_item}>
-            <CardItem />
+            <CardItem
+              date='1 год'
+              text='Изменить образ жизни 🔥'
+              priceDiscount={2990}
+              price={5990}
+              discount={50}
+            />
           </li>
           <li className={styles.card_item}>
-            <CardItem />
+            <CardItem
+              date='Навсегда'
+              text='Всегда быть в форме ⭐️'
+              priceDiscount={5990}
+              price={18990}
+              discount={70}
+            />
           </li>
         </ul>
         <p className={styles.text_hint}>
