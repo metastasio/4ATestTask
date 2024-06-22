@@ -8,6 +8,88 @@
 
 .banner > img {
   display: block;
-  border: 1px solid red;
   margin: 0 auto;
+}
+
+.card_list {
+  margin: 10px 0 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card_item + .card_item {
+  margin-top: 10px;
+}
+
+.text_hint {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.2px;
+}
+
+.policy {
+  margin: 36px 0 22px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.policy_label {
+  color: var(--fc-policy);
+}
+.policy_label > a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.policy_input {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--bg-secondary);
+  margin: 0;
+  font: inherit;
+  color: var(--fc-policy);
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--fc-policy);
+  border-radius: 4.8px;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+.policy_input::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 4.8px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 24px 24px var(--accent2);
+}
+
+.policy_input:checked::before {
+  transform: scale(1);
+  background-image: url('checked.svg');
+}
+
+.button_buy {
+  margin: 0 0 20px;
+  width: 335px;
+  padding: 28px 0;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--ff-title);
+  background-color: var(--accent);
+  border: none;
+  border-radius: var(--max-radius);
+  color: var(--bg-secondary);
+}
+
+.policy_warning {
+  display: none;
 }
