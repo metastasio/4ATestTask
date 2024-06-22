@@ -60,32 +60,31 @@
   height: 24px;
   border: 1px solid var(--fc-policy);
   border-radius: 4.8px;
-  transform: translateY(-0.075em);
+  flex-shrink: 0;
 
   display: grid;
   place-content: center;
 }
 
 .policy_input::before {
+  display: none;
   content: '';
   width: 24px;
   height: 24px;
   border-radius: 4.8px;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 24px 24px var(--accent2);
-
-  background-image: url('checked.svg');
+  background-color: var(--accent2);
 }
 
 .policy_input:checked::before {
-  transform: scale(1);
+  display: block;
   background-image: url('checked.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .button_buy {
   margin: 0 0 20px;
-  width: 335px;
+  width: 100%;
   padding: 28px 0;
   font-size: 20px;
   font-weight: 500;
