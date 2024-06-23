@@ -7,7 +7,12 @@
 .title {
   margin: 0;
   padding: 0;
+  font-family: var(--ff-title);
   line-height: 26.4px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
 .banner > img {
@@ -87,12 +92,14 @@
   width: 100%;
   padding: 28px 0;
   font-size: 20px;
+  line-height: 1;
   font-weight: 500;
   font-family: var(--ff-title);
   background-color: var(--accent);
   border: none;
   border-radius: var(--max-radius);
   color: var(--bg-secondary);
+  text-transform: uppercase;
 }
 
 .policy_warning {

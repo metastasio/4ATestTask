@@ -9,6 +9,11 @@ export const Main = () => {
     Math.floor((minutes % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
   );
 
+{/* <p>
+  Time left: {`${Math.floor(time / 60)}`.padStart(2, 0)}:
+  {`${time % 60}`.padStart(2, 0)}
+</p>; */}
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setMinutes((minutes) => {
@@ -38,6 +43,7 @@ export const Main = () => {
           </div>
         </div>
       </header>
+      
       <main className={styles.wrapper}>
         <h1 className={styles.title}>Выберите подходящий тарифный план</h1>
         <picture className={styles.banner}>

@@ -15,15 +15,15 @@
 }
 
 .wrapper {
-  padding: 36px 86px 36px 24px;
+  padding: 36px 64px 26px 24px;
   border: 2px solid var(--border-color);
   border-radius: var(--base-radius);
   background-color: var(--bg-secondary);
 
   display: grid;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(2, auto);
-  gap: 1px 24px;
+  grid-template-columns: 100px min-content;
+  gap: 0 24px;
 
   position: relative;
 }
@@ -54,13 +54,15 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18.2px;
+
+  text-wrap: pretty;
 }
 
 .price_discount {
   font-size: 44px;
   line-height: 48px;
+  letter-spacing: -2px;
   font-weight: bold;
-  text-align: right;
 }
 
 .price {
@@ -79,7 +81,7 @@
   background-image: url('Star.svg');
   background-repeat: no-repeat;
   background-position: center center;
-  right: 9px;
+  right: 7px;
   top: 4px;
   color: var(--bg-secondary);
   font-size: 14px;

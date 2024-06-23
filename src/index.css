@@ -47,6 +47,13 @@
 
 @font-face {
   font-family: 'PT Root UI';
+  src: url('fonts/PT-Root-UI_Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
   src: url('fonts/PT-Root-UI_Light.ttf');
   font-weight: 300;
   font-style: normal;
