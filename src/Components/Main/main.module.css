@@ -1,7 +1,7 @@
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 .title {
@@ -42,7 +42,7 @@
 }
 
 .policy_label {
-  color: var(--fc-policy);
+  color: var(--fc-medium);
 }
 .policy_label > a {
   color: var(--link-color);
@@ -55,10 +55,10 @@
   background-color: var(--bg-secondary);
   margin: 0;
   font: inherit;
-  color: var(--fc-policy);
+  color: var(--fc-medium);
   width: 24px;
   height: 24px;
-  border: 1px solid var(--fc-policy);
+  border: 1px solid var(--fc-medium);
   border-radius: 4.8px;
   flex-shrink: 0;
 
@@ -83,7 +83,7 @@
 }
 
 .button_buy {
-  margin: 0 0 20px;
+  margin: 0 0;
   width: 100%;
   padding: 28px 0;
   font-size: 20px;
@@ -97,4 +97,52 @@
 
 .policy_warning {
   display: none;
+}
+
+.header {
+  margin: 0;
+  padding: 8px 0;
+  background-color: var(--bg-secondary);
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-weight: 500;
+  gap: 10.5px;
+  align-items: center;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+}
+
+.timer_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.timer_unit_wrapper {
+  text-align: center;
+  margin: 5px 12px;
+}
+
+.timer_time,
+.timer_separator {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-weight: normal;
+  color: var(--accent2);
+  font-family: var(--ff-secondary);
+  line-height: 41.2px;
+}
+
+.timer_text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 18.2px;
+  color: var(--fc-medium);
 }

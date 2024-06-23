@@ -5,6 +5,20 @@ import styles from './main.module.css';
 export const Main = () => {
   return (
     <>
+      <header className={styles.header}>
+        <p className={styles.text}>Скидка действует:</p>
+        <div className={styles.timer_wrapper}>
+          <div className={styles.timer_unit_wrapper}>
+            <p className={styles.timer_time}>02</p>
+            <p className={styles.timer_text}>часов</p>
+          </div>
+          <p className={styles.timer_separator}>:</p>
+          <div className={styles.timer_unit_wrapper}>
+            <p className={styles.timer_time}>59</p>
+            <p className={styles.timer_text}>минут</p>
+          </div>
+        </div>
+      </header>
       <main className={styles.wrapper}>
         <h1 className={styles.title}>Выберите подходящий тарифный план</h1>
         <picture className={styles.banner}>
