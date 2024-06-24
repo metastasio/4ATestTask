@@ -1,49 +1,37 @@
-import { useEffect, useState } from 'react';
+import { Header } from '../Header/Header';
 import { CardItem } from '../Card/CardItem';
 
 import styles from './main.module.css';
 
 export const Main = () => {
-  const [minutes, setMinutes] = useState(2);
-  const [hours, setHours] = useState(
-    Math.floor((minutes % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-  );
+  // const [minutes, setMinutes] = useState(2);
+  // const [hours, setHours] = useState(
+  //   Math.floor((minutes % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+  // );
 
-{/* <p>
+  {
+    /* <p>
   Time left: {`${Math.floor(time / 60)}`.padStart(2, 0)}:
   {`${time % 60}`.padStart(2, 0)}
-</p>; */}
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setMinutes((minutes) => {
-        if (minutes === 0) {
-          clearInterval(timer);
-          return 0;
-        } else return minutes - 1;
-      });
-    }, 60000);
+</p>; */
+  }
 
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setMinutes((minutes) => {
+  //       if (minutes === 0) {
+  //         clearInterval(timer);
+  //         return 0;
+  //       } else return minutes - 1;
+  //     });
+  //   }, 60000);
+
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <>
-      <header className={styles.header}>
-        <p className={styles.text}>Скидка действует:</p>
-        <div className={styles.timer_wrapper}>
-          <div className={styles.timer_unit_wrapper}>
-            <p className={styles.timer_time}>{hours}</p>
-            <p className={styles.timer_text}>часов</p>
-          </div>
-          <p className={styles.timer_separator}>:</p>
-          <div className={styles.timer_unit_wrapper}>
-            <p className={styles.timer_time}>{minutes}</p>
-            <p className={styles.timer_text}>минут</p>
-          </div>
-        </div>
-      </header>
-      
+      <Header />
       <main className={styles.wrapper}>
         <h1 className={styles.title}>Выберите подходящий тарифный план</h1>
         <picture className={styles.banner}>
