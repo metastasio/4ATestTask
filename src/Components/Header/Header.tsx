@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
+// import { TimerContext } from '../../App';
 
 import styles from './header.module.css';
+import { useTimerContext } from '../../useTimerContext';
 
 export const Header = () => {
   //   Получение данных от сервиса
   // Ссылка на получение: https://t-pay.iqfit.app/subscribe/list-test
   // Пример одной записи:
-
+  const isExpiring = useTimerContext();
+  console.log(isExpiring);
   const [time, setTime] = useState(120000);
   const currentHours = Math.floor((time / (1000 * 60 * 60)) % 24);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
