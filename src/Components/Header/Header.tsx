@@ -15,8 +15,11 @@ export const Header = () => {
     const interval = setInterval(() => {
       const getTime = () => {
         console.log(time);
-        if (currentHours > 0 || currentMinutes > 0) {
+        if (time > 0) {
           setTime((prev) => (prev -= 1000));
+        }
+        if (time <= 30000) {
+          console.log('hehe');
         }
       };
       getTime();
