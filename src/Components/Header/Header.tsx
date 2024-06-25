@@ -10,7 +10,7 @@ export const Header = () => {
   // Пример одной записи:
   const { status, setStatus } = useTimerContext();
   console.log(status);
-  const [time, setTime] = useState(120000);
+  const [time, setTime] = useState(40000);
   const currentHours = Math.floor((time / (1000 * 60 * 60)) % 24);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
   const currentSeconds = Math.floor((time / 1000) % 60);
@@ -23,6 +23,9 @@ export const Header = () => {
         }
         if (time <= 30000) {
           setStatus('expiring');
+        }
+        if (time === 0) {
+          setStatus('ended');
         }
       };
       getTime();
@@ -38,7 +41,8 @@ export const Header = () => {
         <div className={styles.timer_unit_wrapper}>
           <p
             className={cn(styles.timer_time, {
-              [styles.expiring]: status === 'expiring',
+              [styles.timer_expiring]: status === 'expiring',
+              [styles.timer_ended]: status === 'ended',
             })}
           >
             {`${currentHours}`.padStart(2, '0')}
@@ -47,7 +51,8 @@ export const Header = () => {
         </div>
         <p
           className={cn(styles.timer_separator, {
-            [styles.expiring]: status === 'expiring',
+            [styles.timer_expiring]: status === 'expiring',
+            [styles.timer_ended]: status === 'ended',
           })}
         >
           :
@@ -55,7 +60,8 @@ export const Header = () => {
         <div className={styles.timer_unit_wrapper}>
           <p
             className={cn(styles.timer_time, {
-              [styles.expiring]: status === 'expiring',
+              [styles.timer_expiring]: status === 'expiring',
+              [styles.timer_ended]: status === 'ended',
             })}
           >
             {`${currentMinutes}`.padStart(2, '0')}
@@ -64,7 +70,8 @@ export const Header = () => {
         </div>
         <p
           className={cn(styles.timer_separator, {
-            [styles.expiring]: status === 'expiring',
+            [styles.timer_expiring]: status === 'expiring',
+            [styles.timer_ended]: status === 'ended',
           })}
         >
           :
@@ -72,7 +79,8 @@ export const Header = () => {
         <div className={styles.timer_unit_wrapper}>
           <p
             className={cn(styles.timer_time, {
-              [styles.expiring]: status === 'expiring',
+              [styles.timer_expiring]: status === 'expiring',
+              [styles.timer_ended]: status === 'ended',
             })}
           >
             {`${currentSeconds}`.padStart(2, '0')}
