@@ -9,7 +9,7 @@ export const Header = () => {
   // Ссылка на получение: https://t-pay.iqfit.app/subscribe/list-test
   // Пример одной записи:
   const { status, setStatus } = useTimerContext();
-  console.log(status);
+  // console.log(status);
   const [time, setTime] = useState(40000);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
   const currentSeconds = Math.floor((time / 1000) % 60);

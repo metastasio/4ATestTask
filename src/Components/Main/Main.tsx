@@ -1,14 +1,22 @@
+import React, { useEffect, useState } from 'react';
 import { Header } from '../Header/Header';
 import { CardItem } from '../Card/CardItem';
+import { useTimerContext } from '../../useTimerContext';
+import { Modal } from '../Modal/Modal';
 
 import styles from './main.module.css';
-import { useTimerContext } from '../../useTimerContext';
-import React, { useState } from 'react';
 
 export const Main = () => {
   const { status } = useTimerContext();
+  const [isOpen, setIsOpen] = useState(false);
   const [checked, setChecked] =
     useState<React.InputHTMLAttributes<HTMLInputElement>>();
+
+  useEffect(() => {
+    if (status === 'ended') {
+      setIsOpen(true);
+    }
+  }, [status]);
 
   return (
     <>
@@ -87,6 +95,7 @@ export const Main = () => {
           согласно оферте.
         </p>
       </main>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </>
   );
 };
