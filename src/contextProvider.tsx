@@ -6,21 +6,23 @@ import {
   useState,
 } from 'react';
 
+type Status = 'active' | 'expiring' | 'ended';
+
 type Context = {
-  isExpiring: boolean;
-  setExpiring: Dispatch<SetStateAction<boolean>>;
+  status: Status;
+  setStatus: Dispatch<SetStateAction<Status>>;
 };
 
 export const TimerContext = createContext<Context | null>(null);
 
-export const TimerContextProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [isExpiring, setExpiring] = useState(false);
+export const TimerContextProvider: React.FC<PropsWithChildren> = ({
+  children,
+}) => {
+  const [status, setStatus] = useState<Status>('active');
 
   return (
-    <TimerContext.Provider value={{ isExpiring, setExpiring }}>
+    <TimerContext.Provider value={{ status, setStatus }}>
       {children}
     </TimerContext.Provider>
   );
 };
-
-
