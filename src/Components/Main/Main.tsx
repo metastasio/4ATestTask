@@ -2,8 +2,12 @@ import { Header } from '../Header/Header';
 import { CardItem } from '../Card/CardItem';
 
 import styles from './main.module.css';
+import { useTimerContext } from '../../useTimerContext';
+import React, { useState } from 'react';
 
 export const Main = () => {
+  const { status } = useTimerContext();
+  const [checked, setChecked] = useState<React.InputHTMLAttributes<HTMLInputElement>>();
 
   return (
     <>
@@ -57,7 +61,13 @@ export const Main = () => {
           за 1 месяц
         </p>
         <div className={styles.policy}>
-          <input id='policy' type='checkbox' className={styles.policy_input} />
+          <input
+            id='policy'
+            type='checkbox'
+            className={styles.policy_input}
+            checked={status === 'expiring'}
+            onChange={setChecked}
+          />
           <label htmlFor='policy' className={styles.policy_label}>
             Я соглашаюсь с <a href='#'>Правилами сервиса</a> и условиями{' '}
             <a href='#'>Публичной оферты</a>.
