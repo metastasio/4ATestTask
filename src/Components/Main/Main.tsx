@@ -8,13 +8,13 @@ import styles from './main.module.css';
 
 export const Main = () => {
   const { status } = useTimerContext();
-  const [isOpen, setIsOpen] = useState(false);
-  const [checked, setChecked] =
-    useState<React.InputHTMLAttributes<HTMLInputElement>>();
+  const [isOpen, setOpen] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     if (status === 'ended') {
-      setIsOpen(true);
+      setOpen(true);
+      setChecked(true);
     }
   }, [status]);
 
@@ -78,8 +78,8 @@ export const Main = () => {
             id='policy'
             type='checkbox'
             className={styles.policy_input}
-            checked={status === 'expiring'}
-            onChange={setChecked}
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
           />
           <label htmlFor='policy' className={styles.policy_label}>
             Я соглашаюсь с <a href='#'>Правилами сервиса</a> и условиями{' '}
@@ -95,7 +95,7 @@ export const Main = () => {
           согласно оферте.
         </p>
       </main>
-      {isOpen && <Modal setIsOpen={setIsOpen} />}
+      {isOpen && <Modal setOpen={setOpen} />}
     </>
   );
 };

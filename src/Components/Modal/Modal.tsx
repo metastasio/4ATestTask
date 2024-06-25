@@ -1,25 +1,25 @@
 import styles from './modal.module.css';
 
 type ModalProps = {
-  setIsOpen: () => void;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Modal = ({ setIsOpen }: ModalProps) => {
+export const Modal = ({ setOpen }: ModalProps) => {
   return (
     <>
-      <div className={styles.background} onClick={() => setIsOpen(false)} />
+      <div className={styles.background} onClick={() => {
+        console.log('keke')
+        setOpen(false)}} />
       <div className={styles.modal}>
         <div className={styles.label}>горящее предложение</div>
         <button
           className={styles.button_close}
-          onClick={() => setIsOpen(false)}
+          onClick={() => setOpen(false)}
         ></button>
-        {/* <div className={styles.heading}> */}
         <h2 className={styles.header}>
           не упусти свой шанс <br />
           <span className={styles.accent}>последний шанс</span>
         </h2>
-        {/* </div> */}
 
         <p className={styles.text}>
           Мы знаем, как трудно начать.. <strong>Поэтому!</strong>
