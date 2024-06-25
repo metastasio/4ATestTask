@@ -17,17 +17,17 @@
 
 .banner > img {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .card_list {
-  margin: 10px 0 10px;
+  margin: 8px 0 8px;
   padding: 0;
   list-style-type: none;
 }
 
 .card_item + .card_item {
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .text_hint {
@@ -39,11 +39,12 @@
 }
 
 .policy {
-  margin: 36px 0 22px;
+  margin: 34px 0 22px;
   display: flex;
   flex-flow: row nowrap;
   gap: 12px;
   align-items: center;
+  line-height: 17.6px;
 }
 
 .policy_label {
@@ -92,7 +93,7 @@
   width: 100%;
   padding: 28px 0;
   font-size: 20px;
-  line-height: 1;
+  line-height: 20px;
   font-weight: 500;
   font-family: var(--ff-title);
   background-color: var(--accent);

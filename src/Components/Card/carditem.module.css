@@ -22,7 +22,7 @@
 
   display: grid;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: 100px min-content;
+  grid-template-columns: 108px min-content;
   gap: 0 24px;
 
   position: relative;
@@ -59,8 +59,9 @@
 }
 
 .price_discount {
+  margin-top: 4px;
   font-size: 44px;
-  line-height: 48px;
+  line-height: 40px;
   letter-spacing: -2px;
   font-weight: bold;
 }

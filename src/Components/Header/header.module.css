@@ -1,6 +1,6 @@
 .header {
   margin: 0;
-  padding: 8px 0;
+  padding: 6px 0;
   background-color: var(--bg-secondary);
 
   display: flex;
@@ -46,7 +46,7 @@
   color: var(--fc-medium);
 }
 
-.timer_expiring {
+/* .timer_expiring {
   color: var(--accent);
   animation: blink 1s linear infinite;
 }
@@ -60,7 +60,7 @@
   100% {
     opacity: 0;
   }
-}
+} */
 
 .timer_ended {
   color: var(--accent);
