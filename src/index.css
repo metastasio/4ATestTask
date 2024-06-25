@@ -60,36 +60,36 @@
 }
 
 @font-face {
-	font-family: 'Rubik';
-	src: url('fonts/Rubik-Regular.eot');
-	src: local('Rubik'), local('Rubik-Regular'),
-		url('fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Rubik-Regular.woff') format('woff'),
-		url('fonts/Rubik-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-Regular.eot');
+  src: local('Rubik'), local('Rubik-Regular'),
+    url('fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Rubik-Regular.woff') format('woff'),
+    url('fonts/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Rubik';
-	src: url('fonts/Rubik-Bold.eot');
-	src: local('Rubik Bold'), local('Rubik-Bold'),
-		url('fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Rubik-Bold.woff') format('woff'),
-		url('fonts/Rubik-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-Bold.eot');
+  src: local('Rubik Bold'), local('Rubik-Bold'),
+    url('fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Rubik-Bold.woff') format('woff'),
+    url('fonts/Rubik-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Rubik';
-	src: url('fonts/Rubik-Medium.eot');
-	src: local('Rubik Medium'), local('Rubik-Medium'),
-		url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
-		url('fonts/Rubik-Medium.woff') format('woff'),
-		url('fonts/Rubik-Medium.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-Medium.eot');
+  src: local('Rubik Medium'), local('Rubik-Medium'),
+    url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Rubik-Medium.woff') format('woff'),
+    url('fonts/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 :root {
@@ -114,6 +114,7 @@
   --accent2-50: #01b9c505;
 
   --max-radius: 60px;
+  --md-radius: 30px;
   --base-radius: 20px;
 }
 
@@ -135,4 +136,8 @@ body {
   color: var(--fc-main);
   font-size: 16px;
   font-family: var(--ff-main);
+}
+
+button:hover {
+  cursor: pointer;
 }
