@@ -18,7 +18,6 @@ export const Header = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       const getTime = () => {
-        console.log(time);
         if (time > 0) {
           setTime((prev) => (prev -= 1000));
         }

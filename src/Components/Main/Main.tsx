@@ -4,30 +4,6 @@ import { CardItem } from '../Card/CardItem';
 import styles from './main.module.css';
 
 export const Main = () => {
-  // const [minutes, setMinutes] = useState(2);
-  // const [hours, setHours] = useState(
-  //   Math.floor((minutes % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-  // );
-
-  {
-    /* <p>
-  Time left: {`${Math.floor(time / 60)}`.padStart(2, 0)}:
-  {`${time % 60}`.padStart(2, 0)}
-</p>; */
-  }
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setMinutes((minutes) => {
-  //       if (minutes === 0) {
-  //         clearInterval(timer);
-  //         return 0;
-  //       } else return minutes - 1;
-  //     });
-  //   }, 60000);
-
-  //   return () => clearInterval(timer);
-  // }, []);
 
   return (
     <>

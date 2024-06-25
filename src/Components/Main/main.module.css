@@ -100,10 +100,20 @@
   border-radius: var(--max-radius);
   color: var(--bg-secondary);
   text-transform: uppercase;
+
+  -webkit-animation: blink 1s linear infinite;
+  -moz-animation: blink 1s linear infinite;
+  -ms-animation: blink 1s linear infinite;
+  -o-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% { box-shadow: 0 0 15px var(--accent); }
+    50% { box-shadow: none; }
+    100% { box-shadow: 0 0 15px var(--accent); }
 }
 
 .policy_warning {
   display: none;
 }
-
-
