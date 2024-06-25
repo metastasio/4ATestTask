@@ -45,3 +45,7 @@
   line-height: 18.2px;
   color: var(--fc-medium);
 }
+
+.expiring {
+  color: var(--accent);
+}
