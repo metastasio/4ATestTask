@@ -11,7 +11,6 @@ export const Header = () => {
   const { status, setStatus } = useTimerContext();
   console.log(status);
   const [time, setTime] = useState(40000);
-  const currentHours = Math.floor((time / (1000 * 60 * 60)) % 24);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
   const currentSeconds = Math.floor((time / 1000) % 60);
 
@@ -32,31 +31,12 @@ export const Header = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [currentHours, currentMinutes, time, setStatus]);
+  }, [currentMinutes, time, setStatus]);
 
   return (
     <header className={styles.header}>
       <p className={styles.text}>Скидка действует:</p>
       <div className={styles.timer_wrapper}>
-        <div className={styles.timer_unit_wrapper}>
-          <p
-            className={cn(styles.timer_time, {
-              [styles.timer_expiring]: status === 'expiring',
-              [styles.timer_ended]: status === 'ended',
-            })}
-          >
-            {`${currentHours}`.padStart(2, '0')}
-          </p>
-          <p className={styles.timer_text}>часов</p>
-        </div>
-        <p
-          className={cn(styles.timer_separator, {
-            [styles.timer_expiring]: status === 'expiring',
-            [styles.timer_ended]: status === 'ended',
-          })}
-        >
-          :
-        </p>
         <div className={styles.timer_unit_wrapper}>
           <p
             className={cn(styles.timer_time, {

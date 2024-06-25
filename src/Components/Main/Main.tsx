@@ -7,7 +7,8 @@ import React, { useState } from 'react';
 
 export const Main = () => {
   const { status } = useTimerContext();
-  const [checked, setChecked] = useState<React.InputHTMLAttributes<HTMLInputElement>>();
+  const [checked, setChecked] =
+    useState<React.InputHTMLAttributes<HTMLInputElement>>();
 
   return (
     <>
@@ -21,6 +22,7 @@ export const Main = () => {
         <ul className={styles.card_list}>
           <li className={styles.card_item}>
             <CardItem
+              status={status}
               date='1 месяц'
               text='Чтобы просто начать 👍🏻'
               priceDiscount={699}
@@ -30,6 +32,7 @@ export const Main = () => {
           </li>
           <li className={styles.card_item}>
             <CardItem
+              status={status}
               date='3 месяца'
               text='Привести тело впорядок 💪🏻'
               priceDiscount={999}
@@ -39,6 +42,7 @@ export const Main = () => {
           </li>
           <li className={styles.card_item}>
             <CardItem
+              status={status}
               date='1 год'
               text='Изменить образ жизни 🔥'
               priceDiscount={2990}
@@ -48,6 +52,7 @@ export const Main = () => {
           </li>
           <li className={styles.card_item}>
             <CardItem
+              status={status}
               date='Навсегда'
               text='Всегда быть в форме ⭐️'
               priceDiscount={5990}

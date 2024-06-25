@@ -109,9 +109,15 @@
 }
 
 @keyframes blink {
-    0% { box-shadow: 0 0 15px var(--accent); }
-    50% { box-shadow: none; }
-    100% { box-shadow: 0 0 15px var(--accent); }
+  0% {
+    box-shadow: 0 0 15px var(--accent);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 15px var(--accent);
+  }
 }
 
 .policy_warning {
