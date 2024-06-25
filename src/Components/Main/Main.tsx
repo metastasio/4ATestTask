@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '../Header/Header';
 import { CardItem } from '../Card/CardItem';
 import { useTimerContext } from '../../useTimerContext';

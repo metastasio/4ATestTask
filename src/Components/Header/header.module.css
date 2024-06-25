@@ -32,10 +32,11 @@
   margin: 0;
   padding: 0;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: bold;
   color: var(--accent2);
   font-family: var(--ff-secondary);
   line-height: 41.2px;
+  font-variant-numeric: tabular-nums;
 }
 
 .timer_text {
