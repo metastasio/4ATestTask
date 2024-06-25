@@ -10,7 +10,7 @@ export const Header = () => {
   // Пример одной записи:
   const { status, setStatus } = useTimerContext();
   console.log(status);
-  const [time, setTime] = useState(120000);
+  const [time, setTime] = useState(70000);
   const currentHours = Math.floor((time / (1000 * 60 * 60)) % 24);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
 
@@ -45,7 +45,13 @@ export const Header = () => {
           </p>
           <p className={styles.timer_text}>часов</p>
         </div>
-        <p className={styles.timer_separator}>:</p>
+        <p
+          className={cn(styles.timer_separator, {
+            [styles.expiring]: status === 'expiring',
+          })}
+        >
+          :
+        </p>
         <div className={styles.timer_unit_wrapper}>
           <p
             className={cn(styles.timer_time, {
