@@ -10,9 +10,10 @@ export const Header = () => {
   // Пример одной записи:
   const { status, setStatus } = useTimerContext();
   console.log(status);
-  const [time, setTime] = useState(70000);
+  const [time, setTime] = useState(120000);
   const currentHours = Math.floor((time / (1000 * 60 * 60)) % 24);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
+  const currentSeconds = Math.floor((time / 1000) % 60);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,6 +62,23 @@ export const Header = () => {
             {`${currentMinutes}`.padStart(2, '0')}
           </p>
           <p className={styles.timer_text}>минут</p>
+        </div>
+        <p
+          className={cn(styles.timer_separator, {
+            [styles.expiring]: status === 'expiring',
+          })}
+        >
+          :
+        </p>
+        <div className={styles.timer_unit_wrapper}>
+          <p
+            className={cn(styles.timer_time, {
+              [styles.expiring]: status === 'expiring',
+            })}
+          >
+            {`${currentSeconds}`.padStart(2, '0')}
+          </p>
+          <p className={styles.timer_text}>секунд</p>
         </div>
       </div>
     </header>
