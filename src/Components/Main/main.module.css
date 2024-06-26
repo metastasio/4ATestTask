@@ -5,7 +5,7 @@
 }
 
 .title {
-  margin: 0;
+  margin: 80px 0 0;
   padding: 0;
   font-family: var(--ff-title);
   line-height: 26.4px;

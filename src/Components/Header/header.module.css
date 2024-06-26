@@ -1,8 +1,9 @@
 .header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 6px 0;
-  background-color: var(--bg-secondary);
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
