@@ -21,8 +21,8 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
           type='radio'
         />
         <p className={styles.price_discount}>{priceDiscount}₽</p>
-        <p className={styles.price}>{price}₽</p>
         <div className={styles.sale}>-{discount}%</div>
+        <p className={styles.price}>{price}₽</p>
       </div>
     </a>
   );
