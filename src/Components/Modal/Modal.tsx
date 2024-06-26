@@ -14,7 +14,7 @@ export const Modal = ({ setOpen }: ModalProps) => {
           setOpen(false);
         }}
       >
-        <div className={styles.modal}>
+        <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           <div className={styles.label}>горящее предложение</div>
           <button
             className={styles.button_close}
