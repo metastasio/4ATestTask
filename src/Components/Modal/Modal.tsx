@@ -1,3 +1,4 @@
+import { DiscountCardItem } from '../Cards/DiscountCard/DiscountCardItem';
 import styles from './modal.module.css';
 
 type ModalProps = {
@@ -10,7 +11,6 @@ export const Modal = ({ setOpen }: ModalProps) => {
       <div
         className={styles.background}
         onClick={() => {
-          console.log('keke');
           setOpen(false);
         }}
       >
@@ -38,7 +38,32 @@ export const Modal = ({ setOpen }: ModalProps) => {
           <p className={styles.text}>
             <strong>Посмотри, что мы для тебя приготовили&nbsp;🔥</strong>
           </p>
-          <p>ахахха ничего</p>
+          <ul className={styles.card_list}>
+            <li className={styles.card_item}>
+              <DiscountCardItem
+                date='1 неделя'
+                priceDiscount={599}
+                price={999}
+                discount={40}
+              />
+            </li>
+            <li className={styles.card_item}>
+              <DiscountCardItem
+                date='1 месяц'
+                priceDiscount={799}
+                price={1690}
+                discount={50}
+              />
+            </li>
+            <li className={styles.card_item}>
+              <DiscountCardItem
+                date='3 месяца'
+                priceDiscount={1690}
+                price={3990}
+                discount={60}
+              />
+            </li>
+          </ul>
         </div>
       </div>
     </>

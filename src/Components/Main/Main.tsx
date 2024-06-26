@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Header } from '../Header/Header';
-import { CardItem } from '../Card/CardItem';
+import { CardItem } from '../Cards/Card/CardItem';
 import { useTimerContext } from '../../useTimerContext';
 import { Modal } from '../Modal/Modal';
 

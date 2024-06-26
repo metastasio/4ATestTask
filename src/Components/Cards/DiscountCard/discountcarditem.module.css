@@ -1,0 +1,111 @@
+.card_link {
+  text-decoration: none;
+  color: var(--fc-main);
+  &:hover .wrapper {
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
+  &:focus-visible .wrapper {
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.wrapper {
+  padding: 24px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--base-radius);
+  background-color: var(--bg-secondary);
+
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: min-content auto;
+  gap: 0 24px;
+  justify-content: space-between;
+
+}
+.wrapper > * {
+  border: 1px solid red;
+}
+
+.date,
+.text,
+.price_discount,
+.price {
+  margin: 0;
+  padding: 0;
+}
+
+.date {
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  font-family: var(--ff-secondary);
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--fc-secondary);
+}
+
+.radio_input {
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  justify-self: end;
+}
+
+/* .text {
+  grid-row: 2/3;
+  grid-column: 1/2;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+
+  text-wrap: pretty;
+} */
+
+.price_discount {
+  margin-top: 4px;
+  font-size: 44px;
+  line-height: 40px;
+  letter-spacing: -2px;
+  font-weight: bold;
+
+  position: relative;
+  outline: 2px solid greenyellow;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: var(--fc-light);
+  text-align: right;
+  text-decoration: line-through;
+
+  justify-self: end;
+  align-self: end;
+}
+
+.sale {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('Star.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* right: 7px; */
+  /* top: 4px; */
+  color: var(--bg-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: center;
+  padding: 16px 0;
+}
