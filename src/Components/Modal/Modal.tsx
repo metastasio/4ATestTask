@@ -1,3 +1,4 @@
+import { Button } from '../Button/Button';
 import { DiscountCardItem } from '../Cards/DiscountCard/DiscountCardItem';
 import styles from './modal.module.css';
 
@@ -6,6 +7,7 @@ type ModalProps = {
 };
 
 export const Modal = ({ setOpen }: ModalProps) => {
+  
   return (
     <>
       <div
@@ -64,6 +66,7 @@ export const Modal = ({ setOpen }: ModalProps) => {
               />
             </li>
           </ul>
+          <Button content='Начать тренироваться' style='start' />
         </div>
       </div>
     </>

@@ -5,6 +5,7 @@ import { useTimerContext } from '../../useTimerContext';
 import { Modal } from '../Modal/Modal';
 
 import styles from './main.module.css';
+import { Button } from '../Button/Button';
 
 export const Main = () => {
   const { status } = useTimerContext();
@@ -86,7 +87,7 @@ export const Main = () => {
             <a href='#'>Публичной оферты</a>.
           </label>
         </div>
-        <button className={styles.button_buy}>купить</button>
+        <Button content='купить' style='buy' />
 
         <p className={styles.policy_warning}>
           Нажимая «Купить», Пользователь соглашается на автоматическое списание

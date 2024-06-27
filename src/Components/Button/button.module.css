@@ -1,0 +1,48 @@
+.main_button {
+  margin: 0;
+  width: 100%;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: var(--ff-title);
+  background-color: var(--accent);
+  border: none;
+  border-radius: var(--max-radius);
+  color: var(--bg-secondary);
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    outline: 2px solid var(--accent);
+    color: var(--accent);
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.start {
+  margin: 12px 0 20px;
+  padding: 20px 0 22px;
+}
+
+.buy {
+  padding: 28px 0;
+  text-transform: uppercase;
+
+  -webkit-animation: blink 1s linear infinite;
+  -moz-animation: blink 1s linear infinite;
+  -ms-animation: blink 1s linear infinite;
+  -o-animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 15px var(--accent);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 15px var(--accent);
+  }
+}
