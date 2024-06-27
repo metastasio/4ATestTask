@@ -13,7 +13,6 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
   const { date, priceDiscount, price, discount } = props;
 
   return (
-    <a className={styles.card_link} href='#'>
       <div className={styles.wrapper}>
         <p className={styles.date}>{date}</p>
         <label className='sr_only' htmlFor='discount_radio'>
@@ -29,6 +28,5 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
         <SaleBadge discount={discount} style='mini'/>
         <p className={styles.price}>{price}₽</p>
       </div>
-    </a>
   );
 };

@@ -1,21 +1,6 @@
-.card_link {
-  text-decoration: none;
-  color: var(--fc-main);
-  &:hover .wrapper {
-    border: 2px solid var(--accent2);
-    background-color: var(--accent2-50);
-  }
-  &:focus-visible .wrapper {
-    border: 2px solid var(--accent2);
-    background-color: var(--accent2-50);
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
 .wrapper {
   padding: 24px 20px;
+  color: var(--fc-main);
   border: 2px solid var(--border-color);
   border-radius: var(--base-radius);
   background-color: var(--bg-secondary);
@@ -24,6 +9,15 @@
   grid-template-rows: auto 55px;
   grid-template-columns: min-content auto auto;
   gap: 12px 6px;
+  &:hover,
+  :focus-visible {
+    cursor: pointer;
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .date,

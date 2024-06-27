@@ -1,21 +1,6 @@
-.card_link {
-  text-decoration: none;
-  color: var(--fc-main);
-  &:hover .wrapper {
-    border: 2px solid var(--accent2);
-    background-color: var(--accent2-50);
-  }
-  &:focus-visible .wrapper {
-    border: 2px solid var(--accent2);
-    background-color: var(--accent2-50);
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
 .wrapper {
   padding: 36px 64px 26px 24px;
+  color: var(--fc-main);
   border: 2px solid var(--border-color);
   border-radius: var(--base-radius);
   background-color: var(--bg-secondary);
@@ -26,6 +11,18 @@
   gap: 0 24px;
 
   position: relative;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
+  &:focus-visible {
+    border: 2px solid var(--accent2);
+    background-color: var(--accent2-50);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .date,
@@ -74,7 +71,3 @@
   text-align: right;
   text-decoration: line-through;
 }
-
-
-
-
