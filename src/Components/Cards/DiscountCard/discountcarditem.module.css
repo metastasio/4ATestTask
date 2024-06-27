@@ -79,7 +79,6 @@
   border-color: var(--accent2);
 }
 
-
 .price_discount {
   margin-top: 4px;
   font-size: 44px;
@@ -121,21 +120,4 @@
 .price:after {
   -webkit-transform: rotate(14deg);
   transform: rotate(14deg);
-}
-
-.sale {
-  width: 40px;
-  height: 40px;
-  background-image: url('Star.svg');
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: var(--bg-secondary);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 12px;
-  text-align: center;
-  padding: 14px 0;
-
-  justify-self: start;
 }

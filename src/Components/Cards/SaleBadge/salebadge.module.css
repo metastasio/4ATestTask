@@ -1,0 +1,35 @@
+.sale {
+  background-image: url('Star.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-weight: 500;
+  text-align: center;
+}
+
+.mini {
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  color: var(--bg-secondary);
+  font-size: 12px;
+  line-height: 12px;
+  padding: 14px 0;
+
+  justify-self: start;
+}
+
+.regular {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 7px;
+  top: 4px;
+  color: var(--bg-secondary);
+  font-size: 14px;
+  line-height: 16px;
+  padding: 16px 0;
+}
+
+.hidden {
+  display: none;
+}

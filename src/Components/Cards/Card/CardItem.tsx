@@ -1,6 +1,7 @@
 import cn from 'classnames';
 
 import styles from './carditem.module.css';
+import { SaleBadge } from '../SaleBadge/SaleBadge';
 
 type CardItemProps = {
   status: string;
@@ -29,13 +30,18 @@ export const CardItem = (props: CardItemProps) => {
         >
           {price}₽
         </p>
-        <div
+        <SaleBadge
+          discount={discount}
+          style='regular'
+          isHidden={status === 'ended'}
+        />
+        {/* <div
           className={cn(styles.sale, {
             [styles.hidden]: status === 'ended',
           })}
         >
           -{discount}%
-        </div>
+        </div> */}
       </div>
     </a>
   );

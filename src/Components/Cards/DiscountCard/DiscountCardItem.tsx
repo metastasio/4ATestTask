@@ -1,3 +1,5 @@
+import { SaleBadge } from '../SaleBadge/SaleBadge';
+
 import styles from './discountcarditem.module.css';
 
 type DiscountCardItemProps = {
@@ -14,7 +16,9 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
     <a className={styles.card_link} href='#'>
       <div className={styles.wrapper}>
         <p className={styles.date}>{date}</p>
-        <label className='sr_only' htmlFor='discount_radio'>Выбрать план занятий</label>
+        <label className='sr_only' htmlFor='discount_radio'>
+          Выбрать план занятий
+        </label>
         <input
           className={styles.radio_input}
           id='discount_radio'
@@ -22,7 +26,7 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
           name='course'
         />
         <p className={styles.price_discount}>{priceDiscount}₽</p>
-        <div className={styles.sale}>-{discount}%</div>
+        <SaleBadge discount={discount} style='mini'/>
         <p className={styles.price}>{price}₽</p>
       </div>
     </a>
