@@ -7,7 +7,6 @@ type ModalProps = {
 };
 
 export const Modal = ({ setOpen }: ModalProps) => {
-  
   return (
     <>
       <div
@@ -17,11 +16,13 @@ export const Modal = ({ setOpen }: ModalProps) => {
         }}
       >
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-          <div className={styles.label}>горящее предложение</div>
-          <button
-            className={styles.button_close}
-            onClick={() => setOpen(false)}
-          ></button>
+          <div className={styles.heading}>
+            <div className={styles.label}>горящее предложение</div>
+            <button
+              className={styles.button_close}
+              onClick={() => setOpen(false)}
+            ></button>
+          </div>
           <h2 className={styles.header}>
             не упусти свой <br />
             <span className={styles.accent}>последний шанс</span>
