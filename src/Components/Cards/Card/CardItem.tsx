@@ -10,10 +10,11 @@ type CardItemProps = {
   priceDiscount: number;
   price: number;
   discount: number;
+  isHidden: boolean;
 };
 
 export const CardItem = (props: CardItemProps) => {
-  const { status, date, text, priceDiscount, price, discount } = props;
+  const { status, date, text, priceDiscount, price, discount, isHidden } = props;
 
   return (
     <div className={styles.wrapper}>
@@ -24,7 +25,7 @@ export const CardItem = (props: CardItemProps) => {
       </p>
       <p
         className={cn(styles.price, {
-          [styles.hidden]: status === 'ended',
+          [styles.hidden]: isHidden,
         })}
       >
         {price}₽

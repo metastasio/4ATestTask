@@ -1,9 +1,12 @@
 import { Button } from '../Button/Button';
 import { DiscountCardItem } from '../Cards/DiscountCard/DiscountCardItem';
+import { TrainingProgram } from '../Main/types';
+
 import styles from './modal.module.css';
 
 type ModalProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  discountData: TrainingProgram[] | undefined;
 };
 
 export const Modal = ({ setOpen }: ModalProps) => {

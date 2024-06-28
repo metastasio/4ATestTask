@@ -6,16 +6,17 @@ import { useTimerContext } from '../../useTimerContext';
 import { Modal } from '../Modal/Modal';
 import { Button } from '../Button/Button';
 import { popularProgramsAdditional } from '../../config';
+import { TrainingProgram } from './types';
 
 import styles from './main.module.css';
 
-type TrainingProgram = {
-  id: string;
-  name: string;
-  price: number;
-  isPopular: boolean;
-  isDiscount: boolean;
-};
+// type TrainingProgram = {
+//   id: string;
+//   name: string;
+//   price: number;
+//   isPopular: boolean;
+//   isDiscount: boolean;
+// };
 
 export const Main = () => {
   const { status } = useTimerContext();
@@ -24,7 +25,7 @@ export const Main = () => {
   const [data, setData] = useState<null | TrainingProgram[]>(null);
 
   const popularPrograms = data?.filter((program) => program.isPopular);
-  // const discountPrograms = data?.filter((program) => program.isDiscount);
+  const discountPrograms = data?.filter((program) => program.isDiscount);
   console.log(popularPrograms, 'POPULAR');
 
   const getData = async () => {
@@ -54,20 +55,21 @@ export const Main = () => {
           <source srcSet='img.png' media='(max-width: 600px)' />
           <img src='img big.png' alt='Фото, рекламирующее курс' />
         </picture>
-        
+
         <ul className={styles.card_list}>
           {popularPrograms?.map((program) => (
-            <li key={program.id}>
+            <li className={styles.card_item} key={program.id}>
               <CardItem
+                isHidden={status === 'ended'}
                 status={status}
                 date={program.name}
                 text={popularProgramsAdditional[program.name].text}
                 priceDiscount={program.price}
-                price={
+                price={Math.round(
                   (program.price /
                     (100 - popularProgramsAdditional[program.name].discount)) *
-                  100
-                }
+                    100,
+                )}
                 discount={popularProgramsAdditional[program.name].discount}
               />
             </li>
@@ -100,7 +102,7 @@ export const Main = () => {
           согласно оферте.
         </p>
       </main>
-      {isOpen && <Modal setOpen={setOpen} />}
+      {isOpen && <Modal setOpen={setOpen} discountData={discountPrograms} />}
     </>
   );
 };

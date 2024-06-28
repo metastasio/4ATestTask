@@ -71,3 +71,8 @@
   text-align: right;
   text-decoration: line-through;
 }
+
+
+.hidden {
+  display: none;
+}

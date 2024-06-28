@@ -10,7 +10,6 @@ type SaleBadgeProps = {
 
 export const SaleBadge = (props: SaleBadgeProps) => {
     const { style, discount, isHidden } = props;
-    console.log(isHidden, '?')
 
   return (
     <div
