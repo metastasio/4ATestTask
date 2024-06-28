@@ -3,9 +3,9 @@ type DiscountAdditional = {
 };
 
 export const discountProgramsAdditional: DiscountAdditional = {
-  '84b9e8a2-5322-4597-b5b5-de7e7b4522b5': { discount: 40 },
-  'a50a6b2d-1ebd-4ec1-b9eb-a7677ba5fcdb': { discount: 50 },
-  'b85b7336-e1b0-4cf5-a1fd-12739b480069': { discount: 60 },
+  '1 неделя': { discount: 40 },
+  '1 месяц': { discount: 50 },
+  '3 месяца': { discount: 60 },
 };
 
 type PopularAdditional = {

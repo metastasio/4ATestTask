@@ -26,7 +26,6 @@ export const Main = () => {
 
   const popularPrograms = data?.filter((program) => program.isPopular);
   const discountPrograms = data?.filter((program) => program.isDiscount);
-  console.log(popularPrograms, 'POPULAR');
 
   const getData = async () => {
     const response = await axios.get(
@@ -57,20 +56,19 @@ export const Main = () => {
         </picture>
 
         <ul className={styles.card_list}>
-          {popularPrograms?.map((program) => (
-            <li className={styles.card_item} key={program.id}>
+          {popularPrograms?.map(({ id, name, price }) => (
+            <li className={styles.card_item} key={id}>
               <CardItem
                 isHidden={status === 'ended'}
                 status={status}
-                date={program.name}
-                text={popularProgramsAdditional[program.name].text}
-                priceDiscount={program.price}
+                date={name}
+                text={popularProgramsAdditional[name].text}
+                priceDiscount={price}
                 price={Math.round(
-                  (program.price /
-                    (100 - popularProgramsAdditional[program.name].discount)) *
+                  (price / (100 - popularProgramsAdditional[name].discount)) *
                     100,
                 )}
-                discount={popularProgramsAdditional[program.name].discount}
+                discount={popularProgramsAdditional[name].discount}
               />
             </li>
           ))}

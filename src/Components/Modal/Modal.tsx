@@ -1,3 +1,4 @@
+import { discountProgramsAdditional } from '../../config';
 import { Button } from '../Button/Button';
 import { DiscountCardItem } from '../Cards/DiscountCard/DiscountCardItem';
 import { TrainingProgram } from '../Main/types';
@@ -9,7 +10,10 @@ type ModalProps = {
   discountData: TrainingProgram[] | undefined;
 };
 
-export const Modal = ({ setOpen }: ModalProps) => {
+export const Modal = (props: ModalProps) => {
+  const { setOpen, discountData } = props;
+  console.log(discountData);
+
   return (
     <>
       <div
@@ -44,32 +48,24 @@ export const Modal = ({ setOpen }: ModalProps) => {
           <p className={styles.text}>
             <strong>Посмотри, что мы для тебя приготовили&nbsp;🔥</strong>
           </p>
+          
           <ul className={styles.card_list}>
-            <li className={styles.card_item}>
-              <DiscountCardItem
-                date='1 неделя'
-                priceDiscount={599}
-                price={999}
-                discount={40}
-              />
-            </li>
-            <li className={styles.card_item}>
-              <DiscountCardItem
-                date='1 месяц'
-                priceDiscount={799}
-                price={1690}
-                discount={50}
-              />
-            </li>
-            <li className={styles.card_item}>
-              <DiscountCardItem
-                date='3 месяца'
-                priceDiscount={1690}
-                price={3990}
-                discount={60}
-              />
-            </li>
+            {discountData?.map(({ id, name, price }) => (
+              <li className={styles.card_item} key={id}>
+                <DiscountCardItem
+                  date={name}
+                  priceDiscount={price}
+                  price={Math.round(
+                    (price /
+                      (100 - discountProgramsAdditional[name].discount)) *
+                      100,
+                  )}
+                  discount={discountProgramsAdditional[name].discount}
+                />
+              </li>
+            ))}
           </ul>
+
           <Button content='Начать тренироваться' style='start' />
         </div>
       </div>
