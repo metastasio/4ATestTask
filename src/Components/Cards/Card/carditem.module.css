@@ -72,7 +72,49 @@
   text-decoration: line-through;
 }
 
-
 .hidden {
   display: none;
+}
+
+@media (min-width: 880px) {
+  .wrapper {
+    padding: 44px 26px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    /* gap: 4px; */
+  }
+
+  .date {
+    margin-bottom: 22px;
+    font-size: 30px;
+    line-height: 30px;
+    order: 1;
+    align-self: flex-start;
+  }
+
+  .price_discount {
+    order: 2;
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  .price_wrapper {
+    margin-bottom: 18px;
+    height: 26px;
+    order: 3;
+    align-self: flex-end;
+  }
+
+  .price {
+    font-size: 24px;
+    line-height: 26.4px;
+  }
+
+  .text {
+    order: 4;
+    font-size: 16px;
+    line-height: 20.8px;
+  }
 }

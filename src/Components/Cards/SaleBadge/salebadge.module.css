@@ -34,3 +34,16 @@
 .hidden {
   display: none;
 }
+
+@media (min-width: 880px) {
+  .regular {
+    padding: 24px 0;
+    top: -34px;
+    width: 70px;
+    height: 70px;
+
+    font-size: 18px;
+    line-height: 24.2px;
+    background-size: 66px;
+  }
+}
