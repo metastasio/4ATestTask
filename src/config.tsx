@@ -18,7 +18,7 @@ export const popularProgramsAdditional: PopularAdditional = {
     discount: 30,
   },
   '1 месяц': {
-    text: 'Привести тело впорядок 💪🏻',
+    text: 'Привести тело в порядок 💪🏻',
     discount: 40,
   },
   '3 месяца': {
