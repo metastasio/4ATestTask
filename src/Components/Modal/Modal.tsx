@@ -30,9 +30,9 @@ export const Modal = (props: ModalProps) => {
               onClick={() => setOpen(false)}
             ></button>
           </div>
+
           <h2 className={styles.header}>
-            не упусти свой <br />
-            <span className={styles.accent}>последний шанс</span>
+            не упусти свой <span className={styles.accent}>последний шанс</span>
           </h2>
 
           <p className={styles.text}>
@@ -46,9 +46,11 @@ export const Modal = (props: ModalProps) => {
             🏃‍♂️
           </p>
           <p className={styles.text}>
-            <strong>Посмотри, что мы для тебя приготовили&nbsp;🔥</strong>
+            <strong>
+              Посмотри,&nbsp;что&nbsp;мы&nbsp;для&nbsp;тебя&nbsp;приготовили&nbsp;🔥
+            </strong>
           </p>
-          
+
           <ul className={styles.card_list}>
             {discountData?.map(({ id, name, price }) => (
               <li className={styles.card_item} key={id}>

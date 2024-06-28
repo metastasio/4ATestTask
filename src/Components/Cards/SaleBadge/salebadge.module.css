@@ -7,9 +7,10 @@
 }
 
 .mini {
+  margin-top: 4px;
   width: 40px;
   height: 40px;
-  background-size: 40px;
+  background-size: 38px;
   color: var(--bg-secondary);
   font-size: 12px;
   line-height: 12px;
