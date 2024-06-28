@@ -5,9 +5,6 @@ import { useTimerContext } from '../../useTimerContext';
 import styles from './header.module.css';
 
 export const Header = () => {
-  //   Получение данных от сервиса
-  // Ссылка на получение: https://t-pay.iqfit.app/subscribe/list-test
-  // Пример одной записи:
   const { status, setStatus } = useTimerContext();
   const [time, setTime] = useState(10000);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
