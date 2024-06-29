@@ -148,7 +148,13 @@
     grid-template-columns: repeat(2, auto);
   }
 
+.banner > img {
+  
+  margin: 30px auto 0;
+}
+
   .card_list {
+    margin-top: 26px;
     gap: 12px;
   }
 
@@ -165,7 +171,12 @@
 
 @media (min-width: 1100px) {
   .wrapper {
-    max-width: 1100px;
+    padding-top: 26px;
+    max-width: 1140px;
+  }
+
+  .inner_wrapper {
+    gap: 80px;
   }
 
   .title {
@@ -183,7 +194,17 @@
     grid-column: span 3;
   }
 
-  .card_item:last-of-type .item {
-    background-color: rebeccapurple;
+  .text_hint {
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+
+  .policy {
+    margin: 26px 0 48px;
+    padding-right: 140px;
+  }
+  
+  .policy_warning {
+    margin-top: 30px;
   }
 }

@@ -9,7 +9,7 @@ export const discountProgramsAdditional: DiscountAdditional = {
 };
 
 type PopularAdditional = {
-  [key: string]: { text: string; discount: number };
+  [key: string]: { text: string; textLong?: string; discount: number };
 };
 
 export const popularProgramsAdditional: PopularAdditional = {
@@ -27,6 +27,7 @@ export const popularProgramsAdditional: PopularAdditional = {
   },
   навсегда: {
     text: 'Всегда быть в форме ⭐️',
+    textLong: 'Всегда быть в форме и поддерживать своё здоровье ⭐️',
     discount: 70,
   },
 };

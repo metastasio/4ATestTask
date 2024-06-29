@@ -4,9 +4,11 @@ import { SaleBadge } from '../SaleBadge/SaleBadge';
 import styles from './carditem.module.css';
 
 type CardItemProps = {
+  wide: boolean;
   status: string;
   date: string;
   text: string;
+  textLong?: string;
   priceDiscount: number;
   price: number;
   discount: number;
@@ -19,17 +21,20 @@ export const CardItem = (props: CardItemProps) => {
     status,
     date,
     text,
+    textLong,
     priceDiscount,
     price,
     discount,
     isHidden,
     className,
+    wide,
   } = props;
 
   return (
-    <div className={cn(styles.wrapper, className)}>
+    <div className={cn(styles.wrapper, className, { [styles.wide]: wide })}>
       <p className={styles.date}>{date}</p>
       <p className={styles.text}>{text}</p>
+      <p className={styles.text2}>{textLong}</p>
       <p className={styles.price_discount}>
         {status !== 'ended' ? priceDiscount : price}₽
       </p>

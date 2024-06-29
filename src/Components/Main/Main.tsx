@@ -22,7 +22,7 @@ export const Main = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        'https://t-pay.iqfit.app/subscribe/list-testttttt',
+        'https://t-pay.iqfit.app/subscribe/list-test',
       );
       setData(response.data);
     } catch (e) {
@@ -55,14 +55,16 @@ export const Main = () => {
 
           <section className={styles.description}>
             <ul className={styles.card_list}>
-              {popularPrograms?.map(({ id, name, price }) => (
+              {popularPrograms?.map(({ id, name, price }, i) => (
                 <li className={styles.card_item} key={id}>
                   <CardItem
+                    wide={i === popularPrograms?.length - 1}
                     className={styles.item}
                     isHidden={status === 'ended'}
                     status={status}
                     date={name}
                     text={popularProgramsAdditional[name].text}
+                    textLong={popularProgramsAdditional[name].textLong}
                     priceDiscount={price}
                     price={Math.round(
                       (price /
