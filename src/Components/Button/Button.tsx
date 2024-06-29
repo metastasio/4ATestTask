@@ -1,16 +1,16 @@
+import { PropsWithChildren } from 'react';
 import styles from './button.module.css';
 
 type ButtonProps = {
-  content: string;
   style: string;
 };
 
-export const Button = (props: ButtonProps) => {
-  const { content, style } = props;
+export const Button = (props: PropsWithChildren<ButtonProps>) => {
+  const { style, children } = props;
 
   return (
     <button className={`${styles.main_button} ${styles[style]}`}>
-      {content}
+      {children}
     </button>
   );
 };

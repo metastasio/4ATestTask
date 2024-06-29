@@ -75,7 +75,7 @@ export const Modal = (props: ModalProps) => {
             ))}
           </ul>
 
-          <Button content='Начать тренироваться' style='start' />
+          <Button style='start'>Начать тренироваться</Button>
         </div>
       </div>
     </>

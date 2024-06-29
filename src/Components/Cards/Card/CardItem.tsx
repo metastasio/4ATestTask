@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { SaleBadge } from '../SaleBadge/SaleBadge';
 
 import styles from './carditem.module.css';
+import { CSSProperties } from 'react';
 
 type CardItemProps = {
   wide: boolean;
@@ -35,8 +36,11 @@ export const CardItem = (props: CardItemProps) => {
       <p className={styles.date}>{date}</p>
       <p className={styles.text}>{text}</p>
       <p className={styles.text2}>{textLong}</p>
-      <p className={styles.price_discount}>
-        {status !== 'ended' ? priceDiscount : price}₽
+      <p
+        className={styles.price_discount}
+        style={{ '--countup': status !== 'ended' ? priceDiscount : price } as CSSProperties}
+      >
+
       </p>
       <div className={styles.price_wrapper}>
         <p

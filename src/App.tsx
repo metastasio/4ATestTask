@@ -1,5 +1,5 @@
 import { Main } from './Components/Main/Main';
-import { TimerContextProvider } from './contextProvider';
+import { TimerContextProvider } from './context/contextProvider';
 
 // export type Context = {
 //   isExpiring: boolean;

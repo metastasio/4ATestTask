@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Header } from '../Header/Header';
 import { CardItem } from '../Cards/Card/CardItem';
-import { useTimerContext } from '../../useTimerContext';
+import { useTimerContext } from '../../context/useTimerContext';
 import { Modal } from '../Modal/Modal';
 import { Button } from '../Button/Button';
 import { popularProgramsAdditional } from '../../config';
@@ -14,7 +14,7 @@ export const Main = () => {
   const { status } = useTimerContext();
   const [isOpen, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
-  const [data, setData] = useState<null | TrainingProgram[]>(null);
+  const [data, setData] = useState<TrainingProgram[] | null>(null);
   const [fetchError, setFetchError] = useState(false);
 
   const popularPrograms = data?.filter((program) => program.isPopular);
@@ -33,9 +33,11 @@ export const Main = () => {
   };
 
   useEffect(() => {
+    if (status === 'expiring') {
+      setChecked(true);
+    }
     if (status === 'ended') {
       setOpen(true);
-      setChecked(true);
     }
   }, [status]);
 
@@ -96,7 +98,7 @@ export const Main = () => {
                   <a href='#'>Публичной оферты</a>.
                 </label>
               </div>
-              <Button content='купить' style='buy' />
+              <Button style='buy'>купить</Button>
 
               <p className={styles.policy_warning}>
                 Нажимая «Купить», Пользователь соглашается на автоматическое

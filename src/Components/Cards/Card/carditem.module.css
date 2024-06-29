@@ -80,6 +80,24 @@
   display: none;
 }
 
+@property --countup {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.price_discount {
+  transition: --countup 1s;
+  counter-reset: num var(--countup);
+}
+
+.price_discount::before {
+  content: counter(num);
+}
+
+.price_discount::after {
+  content: '₽';
+}
 @media (min-width: 880px) {
   .wrapper {
     height: 100%;
@@ -132,7 +150,7 @@
     padding: 24px 52px 24px 30px;
 
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto) 162px;
     grid-template-rows: 1fr auto;
     gap: 0 20px;
   }
