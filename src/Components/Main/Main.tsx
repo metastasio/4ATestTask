@@ -15,6 +15,7 @@ export const Main = () => {
   const [isOpen, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
   const [data, setData] = useState<null | TrainingProgram[]>(null);
+  const [fetchError, setFetchError] = useState(false);
 
   const popularPrograms = data?.filter((program) => program.isPopular);
   const discountPrograms = data?.filter((program) => program.isDiscount);
@@ -25,8 +26,9 @@ export const Main = () => {
         'https://t-pay.iqfit.app/subscribe/list-test',
       );
       setData(response.data);
+      setFetchError(false);
     } catch (e) {
-      console.log(e.message);
+      setFetchError(true);
     }
   };
 
@@ -52,57 +54,60 @@ export const Main = () => {
             <source srcSet='img.png' media='(max-width: 600px)' />
             <img src='img big.png' alt='Фото, рекламирующее курс' />
           </picture>
+          {!fetchError ? (
+            <section className={styles.description}>
+              <ul className={styles.card_list}>
+                {popularPrograms?.map(({ id, name, price }, i) => (
+                  <li className={styles.card_item} key={id}>
+                    <CardItem
+                      wide={i === popularPrograms?.length - 1}
+                      className={styles.item}
+                      isHidden={status === 'ended'}
+                      status={status}
+                      date={name}
+                      text={popularProgramsAdditional[name].text}
+                      textLong={popularProgramsAdditional[name].textLong}
+                      priceDiscount={price}
+                      price={Math.round(
+                        (price /
+                          (100 - popularProgramsAdditional[name].discount)) *
+                          100,
+                      )}
+                      discount={popularProgramsAdditional[name].discount}
+                    />
+                  </li>
+                ))}
+              </ul>
 
-          <section className={styles.description}>
-            <ul className={styles.card_list}>
-              {popularPrograms?.map(({ id, name, price }, i) => (
-                <li className={styles.card_item} key={id}>
-                  <CardItem
-                    wide={i === popularPrograms?.length - 1}
-                    className={styles.item}
-                    isHidden={status === 'ended'}
-                    status={status}
-                    date={name}
-                    text={popularProgramsAdditional[name].text}
-                    textLong={popularProgramsAdditional[name].textLong}
-                    priceDiscount={price}
-                    price={Math.round(
-                      (price /
-                        (100 - popularProgramsAdditional[name].discount)) *
-                        100,
-                    )}
-                    discount={popularProgramsAdditional[name].discount}
-                  />
-                </li>
-              ))}
-            </ul>
+              <p className={styles.text_hint}>
+                Следуя плану на 3 месяца, люди получают в 2 раза лучший
+                результат, чем за 1 месяц
+              </p>
+              <div className={styles.policy}>
+                <input
+                  id='policy'
+                  type='checkbox'
+                  className={styles.policy_input}
+                  checked={checked}
+                  onChange={(e) => setChecked(e.target.checked)}
+                />
+                <label htmlFor='policy' className={styles.policy_label}>
+                  Я соглашаюсь с <a href='#'>Правилами сервиса</a> и условиями{' '}
+                  <a href='#'>Публичной оферты</a>.
+                </label>
+              </div>
+              <Button content='купить' style='buy' />
 
-            <p className={styles.text_hint}>
-              Следуя плану на 3 месяца, люди получают в 2 раза лучший результат,
-              чем за 1 месяц
-            </p>
-            <div className={styles.policy}>
-              <input
-                id='policy'
-                type='checkbox'
-                className={styles.policy_input}
-                checked={checked}
-                onChange={(e) => setChecked(e.target.checked)}
-              />
-              <label htmlFor='policy' className={styles.policy_label}>
-                Я соглашаюсь с <a href='#'>Правилами сервиса</a> и условиями{' '}
-                <a href='#'>Публичной оферты</a>.
-              </label>
-            </div>
-            <Button content='купить' style='buy' />
-
-            <p className={styles.policy_warning}>
-              Нажимая «Купить», Пользователь соглашается на автоматическое
-              списание денежных средств по истечению купленного периода.
-              Дальнейшие списания по тарифам участвующим в акции осуществляются
-              по полной стоимости согласно оферте.
-            </p>
-          </section>
+              <p className={styles.policy_warning}>
+                Нажимая «Купить», Пользователь соглашается на автоматическое
+                списание денежных средств по истечению купленного периода.
+                Дальнейшие списания по тарифам участвующим в акции
+                осуществляются по полной стоимости согласно оферте.
+              </p>
+            </section>
+          ) : (
+            <p className={styles.error}>Что-то пошло не так...</p>
+          )}
         </div>
       </main>
       {isOpen && <Modal setOpen={setOpen} discountData={discountPrograms} />}

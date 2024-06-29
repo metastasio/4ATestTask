@@ -68,5 +68,9 @@
     font-size: 14px;
     line-height: 18px;
     padding: 16px 0;
+
+    position: absolute;
+    bottom: 366px;
+    /* right: 350px; */
   }
 }
