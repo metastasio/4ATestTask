@@ -114,3 +114,37 @@
   -webkit-transform: rotate(14deg);
   transform: rotate(14deg);
 }
+
+@media (min-width: 435px) {
+  .wrapper {
+    padding: 26px 22px 20px 26px;
+
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto 70px;
+    gap: 12px 0;
+  }
+
+  .date {
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+
+  .radio_input {
+    grid-row: 1/2;
+  }
+
+  .price {
+    grid-column: span 3;
+    grid-row: 2/3;
+    align-self: start;
+    justify-self: start;
+  }
+
+  .price_discount {
+    font-size: 46px;
+    line-height: 50.6px;
+
+    grid-row: 3/4;
+  }
+}

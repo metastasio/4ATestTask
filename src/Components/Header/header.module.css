@@ -10,6 +10,7 @@
   font-weight: 500;
   gap: 10.5px;
   align-items: center;
+  z-index: 1;
 }
 
 .text {
@@ -66,4 +67,21 @@
 
 .timer_ended {
   color: var(--accent);
+}
+
+@media (min-width: 720px) {
+  .header {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .text {
+    font-size: 30px;
+    line-height: 39px;
+  }
+
+  .timer_time, .timer_separator {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

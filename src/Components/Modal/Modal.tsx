@@ -35,7 +35,7 @@ export const Modal = (props: ModalProps) => {
             не упусти свой <span className={styles.accent}>последний шанс</span>
           </h2>
 
-          <p className={styles.text}>
+          <p className={`${styles.text} ${styles.first}`}>
             Мы знаем, как трудно начать.. <strong>Поэтому!</strong>
           </p>
           <p className={styles.bordered_p}>
@@ -45,9 +45,9 @@ export const Modal = (props: ModalProps) => {
             </strong>
             🏃‍♂️
           </p>
-          <p className={styles.text}>
+          <p className={`${styles.text} ${styles.strong}`}>
             <strong>
-              Посмотри,&nbsp;что&nbsp;мы&nbsp;для&nbsp;тебя&nbsp;приготовили&nbsp;🔥
+              Посмотри,&nbsp;что&nbsp;мы для&nbsp;тебя&nbsp;приготовили&nbsp;🔥
             </strong>
           </p>
 
