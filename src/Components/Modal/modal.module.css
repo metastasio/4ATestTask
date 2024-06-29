@@ -141,15 +141,15 @@
     margin: 8px auto 40px;
   }
 
-.strong {
+  .strong {
     font-size: 20px;
   }
 
   .card_list {
     margin: 20px 0 40px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(198px, 1fr));
     gap: 20px;
   }
 

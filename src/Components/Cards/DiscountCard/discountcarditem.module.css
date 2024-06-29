@@ -115,6 +115,11 @@
   transform: rotate(14deg);
 }
 
+.active {
+  border: 2px solid var(--accent2);
+  background-color: var(--accent2-50);
+}
+
 @media (min-width: 435px) {
   .wrapper {
     padding: 26px 22px 20px 26px;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import cn from 'classnames';
 import { SaleBadge } from '../SaleBadge/SaleBadge';
 
 import styles from './discountcarditem.module.css';
@@ -8,18 +8,18 @@ type DiscountCardItemProps = {
   priceDiscount: number;
   price: number;
   discount: number;
+  selected: boolean;
+  handler: () => void;
 };
 
 export const DiscountCardItem = (props: DiscountCardItemProps) => {
-  const { date, priceDiscount, price, discount } = props;
-  const [checked, setChecked] = useState(false);
-
-  const handleClick = () => {
-    setChecked((prev) => !prev);
-  };
+  const { date, priceDiscount, price, discount, selected, handler } = props;
 
   return (
-    <div className={styles.wrapper} onClick={handleClick}>
+    <div
+      className={cn(styles.wrapper, { [styles.active]: selected })}
+      onClick={handler}
+    >
       <p className={styles.date}>{date}</p>
       <label className='sr_only' htmlFor='discount_radio'>
         Выбрать план занятий
@@ -29,8 +29,8 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
         id='discount_radio'
         type='radio'
         name='course'
-        checked={checked}
-        onChange={(e) => e.stopPropagation()}
+        checked={selected}
+        onChange={() => {}}
       />
       <p className={styles.price_discount}>{priceDiscount}₽</p>
       <SaleBadge discount={discount} style='mini' />

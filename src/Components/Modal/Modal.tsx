@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { discountProgramsAdditional } from '../../config';
 import { Button } from '../Button/Button';
 import { DiscountCardItem } from '../Cards/DiscountCard/DiscountCardItem';
@@ -12,7 +13,11 @@ type ModalProps = {
 
 export const Modal = (props: ModalProps) => {
   const { setOpen, discountData } = props;
-  console.log(discountData);
+  const [checked, setChecked] = useState('');
+
+  const handleClick = (id: string) => {
+    setChecked((prev) => (prev === id ? '' : id));
+  };
 
   return (
     <>
@@ -55,6 +60,8 @@ export const Modal = (props: ModalProps) => {
             {discountData?.map(({ id, name, price }) => (
               <li className={styles.card_item} key={id}>
                 <DiscountCardItem
+                  handler={() => handleClick(id)}
+                  selected={checked === id}
                   date={name}
                   priceDiscount={price}
                   price={Math.round(

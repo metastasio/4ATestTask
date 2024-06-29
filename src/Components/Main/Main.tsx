@@ -20,10 +20,14 @@ export const Main = () => {
   const discountPrograms = data?.filter((program) => program.isDiscount);
 
   const getData = async () => {
-    const response = await axios.get(
-      'https://t-pay.iqfit.app/subscribe/list-test',
-    );
-    setData(response.data);
+    try {
+      const response = await axios.get(
+        'https://t-pay.iqfit.app/subscribe/list-testttttt',
+      );
+      setData(response.data);
+    } catch (e) {
+      console.log(e.message);
+    }
   };
 
   useEffect(() => {
@@ -54,6 +58,7 @@ export const Main = () => {
               {popularPrograms?.map(({ id, name, price }) => (
                 <li className={styles.card_item} key={id}>
                   <CardItem
+                    className={styles.item}
                     isHidden={status === 'ended'}
                     status={status}
                     date={name}

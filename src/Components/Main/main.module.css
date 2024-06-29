@@ -120,7 +120,6 @@
   .card_list {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
     gap: 6px;
   }
 
@@ -182,5 +181,9 @@
 
   .card_item:last-of-type {
     grid-column: span 3;
+  }
+
+  .card_item:last-of-type .item {
+    background-color: rebeccapurple;
   }
 }

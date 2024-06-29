@@ -76,8 +76,10 @@
   display: none;
 }
 
+
 @media (min-width: 880px) {
   .wrapper {
+    height: 100%;
     padding: 44px 16px;
     display: flex;
     flex-flow: column wrap;
