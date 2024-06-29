@@ -72,6 +72,7 @@
 @media (min-width: 720px) {
   .header {
     margin: 0;
+    padding-top: 3px;
     font-weight: bold;
   }
 
@@ -80,8 +81,20 @@
     line-height: 39px;
   }
 
-  .timer_time, .timer_separator {
+  .timer_unit_wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .timer_time,
+  .timer_separator {
     font-size: 60px;
-    line-height: 60px;
+    line-height: 61.8px;
+  }
+
+  .timer_text {
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: bold;
   }
 }
