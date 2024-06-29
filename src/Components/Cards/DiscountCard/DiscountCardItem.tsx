@@ -32,8 +32,11 @@ export const DiscountCardItem = (props: DiscountCardItemProps) => {
         checked={selected}
         onChange={() => {}}
       />
-      <p className={styles.price_discount}>{priceDiscount}₽</p>
-      <SaleBadge discount={discount} style='mini' />
+      <p className={styles.price_discount}>
+        {priceDiscount}₽
+        <SaleBadge discount={discount} style='mini' />
+      </p>
+
       <p className={styles.price}>{price}₽</p>
     </div>
   );

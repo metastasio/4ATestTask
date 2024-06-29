@@ -12,12 +12,12 @@ export const SaleBadge = (props: SaleBadgeProps) => {
     const { style, discount, isHidden } = props;
 
   return (
-    <div
+    <span
       className={cn(styles.sale, styles[style], {
-            [styles.hidden]: isHidden,
-          })}
+        [styles.hidden]: isHidden,
+      })}
     >
       -{discount}%
-    </div>
+    </span>
   );
 };
