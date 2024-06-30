@@ -1,8 +1,8 @@
 import cn from 'classnames';
+import { CSSProperties } from 'react';
 import { SaleBadge } from '../SaleBadge/SaleBadge';
 
 import styles from './carditem.module.css';
-import { CSSProperties } from 'react';
 
 type CardItemProps = {
   wide: boolean;
@@ -15,6 +15,8 @@ type CardItemProps = {
   discount: number;
   isHidden: boolean;
   className: string;
+  handler: () => void;
+  selected: boolean;
 };
 
 export const CardItem = (props: CardItemProps) => {
@@ -29,19 +31,29 @@ export const CardItem = (props: CardItemProps) => {
     isHidden,
     className,
     wide,
+    handler,
+    selected,
   } = props;
 
   return (
-    <div className={cn(styles.wrapper, className, { [styles.wide]: wide })}>
+    <div
+      className={cn(styles.wrapper, className, {
+        [styles.wide]: wide,
+        [styles.active]: selected,
+      })}
+      onClick={handler}
+    >
       <p className={styles.date}>{date}</p>
       <p className={styles.text}>{text}</p>
       <p className={styles.text2}>{textLong}</p>
       <p
         className={styles.price_discount}
-        style={{ '--countup': status !== 'ended' ? priceDiscount : price } as CSSProperties}
-      >
-
-      </p>
+        style={
+          {
+            '--countup': status !== 'ended' ? priceDiscount : price,
+          } as CSSProperties
+        }
+      ></p>
       <div className={styles.price_wrapper}>
         <p
           className={cn(styles.price, {

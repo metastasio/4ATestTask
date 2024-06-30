@@ -80,6 +80,11 @@
   display: none;
 }
 
+.active {
+  border: 2px solid var(--accent2);
+  background-color: var(--accent2-50);
+}
+
 @property --countup {
   syntax: '<integer>';
   initial-value: 0;
@@ -98,6 +103,7 @@
 .price_discount::after {
   content: '₽';
 }
+
 @media (min-width: 880px) {
   .wrapper {
     height: 100%;

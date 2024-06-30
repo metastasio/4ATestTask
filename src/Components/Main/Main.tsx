@@ -14,6 +14,7 @@ export const Main = () => {
   const { status } = useTimerContext();
   const [isOpen, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [selected, setSelected] = useState('');
   const [data, setData] = useState<TrainingProgram[] | null>(null);
   const [fetchError, setFetchError] = useState(false);
 
@@ -30,6 +31,10 @@ export const Main = () => {
     } catch (e) {
       setFetchError(true);
     }
+  };
+
+  const handleClick = (id: string) => {
+    setSelected((prev) => (id === prev ? '' : id));
   };
 
   useEffect(() => {
@@ -62,6 +67,8 @@ export const Main = () => {
                 {popularPrograms?.map(({ id, name, price }, i) => (
                   <li className={styles.card_item} key={id}>
                     <CardItem
+                      handler={() => handleClick(id)}
+                      selected={selected === id}
                       wide={i === popularPrograms?.length - 1}
                       className={styles.item}
                       isHidden={status === 'ended'}
