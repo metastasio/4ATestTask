@@ -1,93 +1,93 @@
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeueRegular.eot');
+  src: url('/fonts/BebasNeueRegular.eot');
   src: local('Bebas Neue Regular'), local('BebasNeueRegular'),
-    url('fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/BebasNeueRegular.woff') format('woff'),
-    url('fonts/BebasNeueRegular.ttf') format('truetype');
+    url('/fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/BebasNeueRegular.woff') format('woff'),
+    url('/fonts/BebasNeueRegular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeueBold.eot');
+  src: url('/fonts/BebasNeueBold.eot');
   src: local('Bebas Neue Bold'), local('BebasNeueBold'),
-    url('fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/BebasNeueBold.woff') format('woff'),
-    url('fonts/BebasNeueBold.ttf') format('truetype');
+    url('/fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/BebasNeueBold.woff') format('woff'),
+    url('/fonts/BebasNeueBold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('fonts/BebasNeueLight.eot');
+  src: url('/fonts/BebasNeueLight.eot');
   src: local('Bebas Neue Light'), local('BebasNeueLight'),
-    url('fonts/BebasNeueLight.eot?#iefix') format('embedded-opentype'),
-    url('fonts/BebasNeueLight.woff') format('woff'),
-    url('fonts/BebasNeueLight.ttf') format('truetype');
+    url('/fonts/BebasNeueLight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/BebasNeueLight.woff') format('woff'),
+    url('/fonts/BebasNeueLight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Regular.ttf');
+  src: url('/fonts/PT-Root-UI_Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Bold.ttf');
+  src: url('/fonts/PT-Root-UI_Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Medium.ttf');
+  src: url('/fonts/PT-Root-UI_Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Light.ttf');
+  src: url('/fonts/PT-Root-UI_Light.ttf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('fonts/Rubik-Regular.eot');
+  src: url('/fonts/Rubik-Regular.eot');
   src: local('Rubik'), local('Rubik-Regular'),
-    url('fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Rubik-Regular.woff') format('woff'),
-    url('fonts/Rubik-Regular.ttf') format('truetype');
+    url('/fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Rubik-Regular.woff') format('woff'),
+    url('/fonts/Rubik-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('fonts/Rubik-Bold.eot');
+  src: url('/fonts/Rubik-Bold.eot');
   src: local('Rubik Bold'), local('Rubik-Bold'),
-    url('fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Rubik-Bold.woff') format('woff'),
-    url('fonts/Rubik-Bold.ttf') format('truetype');
+    url('/fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Rubik-Bold.woff') format('woff'),
+    url('/fonts/Rubik-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('fonts/Rubik-Medium.eot');
+  src: url('/fonts/Rubik-Medium.eot');
   src: local('Rubik Medium'), local('Rubik-Medium'),
-    url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Rubik-Medium.woff') format('woff'),
-    url('fonts/Rubik-Medium.ttf') format('truetype');
+    url('/fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Rubik-Medium.woff') format('woff'),
+    url('/fonts/Rubik-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }

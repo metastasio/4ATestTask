@@ -6,7 +6,7 @@ import styles from './header.module.css';
 
 export const Header = () => {
   const { status, setStatus } = useTimerContext();
-  const [time, setTime] = useState(1000);
+  const [time, setTime] = useState(1220000);
   const currentMinutes = Math.floor((time / 1000 / 60) % 60);
   const currentSeconds = Math.floor((time / 1000) % 60);
 
