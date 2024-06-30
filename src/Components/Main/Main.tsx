@@ -112,7 +112,7 @@ export const Main = () => {
           )}
         </div>
       </main>
-      {isOpen && <Modal setOpen={setOpen} discountData={discountPrograms} />}
+      {/* {isOpen && <Modal setOpen={setOpen} discountData={discountPrograms} />} */}
     </>
   );
 };

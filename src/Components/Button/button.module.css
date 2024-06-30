@@ -49,6 +49,7 @@
 
 @media (min-width: 1100px) {
   .buy {
+    margin-top: 2px;
     max-width: 280px;
   }
 
