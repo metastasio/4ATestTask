@@ -50,7 +50,7 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  background-image: url('close.svg');
+  background-image: url('/close.svg');
 }
 
 .header {

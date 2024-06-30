@@ -90,7 +90,7 @@
 
 .policy_input:checked::before {
   display: block;
-  background-image: url('checked.svg');
+  background-image: url('/checked.svg');
   background-repeat: no-repeat;
   background-position: center center;
 }
