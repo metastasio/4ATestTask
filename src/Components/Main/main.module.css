@@ -191,7 +191,7 @@
 
   .card_list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 36px 12px;
+    gap: 34px 12px;
   }
 
   .card_item:last-of-type {

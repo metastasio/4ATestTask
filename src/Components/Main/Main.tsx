@@ -53,7 +53,7 @@ export const Main = () => {
 
         <div className={styles.inner_wrapper}>
           <picture className={styles.banner}>
-            <source srcSet='img.png' media='(max-width: 600px)' />
+            <source srcSet='img.png' media='(max-width: 800px)' />
             <img src='img big.png' alt='Фото, рекламирующее курс' />
           </picture>
           {!fetchError ? (
@@ -112,7 +112,7 @@ export const Main = () => {
           )}
         </div>
       </main>
-      {/* {isOpen && <Modal setOpen={setOpen} discountData={discountPrograms} />} */}
+      {isOpen && <Modal setOpen={setOpen} discountData={discountPrograms} />}
     </>
   );
 };
